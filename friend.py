@@ -21,4 +21,3 @@ class Friend:
         for friend in results:
             friends.append( cls(friend) )
         return friends
-            
