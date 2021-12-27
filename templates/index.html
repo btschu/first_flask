@@ -9,6 +9,50 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 </head>
 <body>
-<h1>Friends List</h1>
+    <div class="container mt-4 bg-primary p-3">
+        <h1 class="mb-4 text-center text-light">Add a Friend</h1>
+        <form class="form-control mb-4 w-50 mx-auto bg-dark text-light p-3"action="/create_friend" method="POST">
+            <div class="form-group mb-2 d-flex justify-content-center">
+                <label class="col-2" for="fname">First Name:</label>
+                <input type="text" name="fname">
+            </div>
+            <div class="form-group mb-2 d-flex justify-content-center">
+                <label class="col-2" for="lname">Last Name:</label>
+                <input type="text" name="lname">
+            </div>
+            <div class="form-group mb-2 d-flex justify-content-center">
+                <label class="col-2" for="occ" >Occupation:</label>
+                <input type="text" name="occ">
+            </div>
+            <div class="d-flex justify-content-center">
+                <input class="btn btn-primary d-flex" type="submit" value="Add Friend">
+            </div>
+        </form> 
+        <h1 class="text-center text-light">All of My Friends</h1>
+        <table class="table table-dark table-striped mt-4 w-50 mx-auto">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Occupation</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for one_friend in all_friends %}
+                    <tr>
+                        <td>{{ one_friend.first_name }}</td>
+                        <td>{{ one_friend.last_name }}</td>
+                        <td>{{ one_friend.occupation }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <!-- {% for one_friend in all_friends %}
+            <p>First Name: {{one_friend.first_name}}</p>
+            <p>Last Name: {{one_friend.last_name}}</p>
+            <p>Occupation: {{one_friend.occupation}}</p>
+            <hr>
+        {% endfor %} -->
+    </div>
 </body>
 </html>
