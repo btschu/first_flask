@@ -121,3 +121,20 @@ if __name__ == "__main__":
 
 Run the server and see what gets printed in the terminal when you go to localhost:5000!
 
+# MySQL Connection Errors
+
+## Objectives:
+
+- Gain familiarity with how the connection from Flask to MySQL works
+
+This may seem like an odd assignment, but getting errors is one of the best ways to start uncovering how things work, and what different parts of our code do.
+
+Using the project you made in the previous tab, go into the mysqlconnection.py file and produce as many PyMySQL errors as possible in twenty minutes. Try using mistyped strings, an incorrect username, remove values, etc.
+
+Copy and paste those errors in a .txt file and explain how you got to that error.
+
+- [ ] Spend 20 minutes generating errors
+
+- [ ] Record the errors in a text file
+
+- [ ] Upload the errors in a text file
